@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Mark Attendance</h2>
+        </div>
+        <div class="nav-user">
+            <span id="faculty-name">Faculty</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/faculty/faculty-dashboard.html">Dashboard</a></li>
+                <li><a href="/faculty/attendance.html" class="active">Mark Attendance</a></li>
+                <li><a href="/faculty/marks.html">Upload Marks</a></li>
+                <li><a href="/faculty/announcements.html">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Mark Attendance</h1>
+            
+            <div class="card">
+                <h2>Select Class</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="select-subject">Subject</label>
+                        <select id="select-subject" required>
+                            <option value="">Select Subject</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance-date">Date</label>
+                        <input type="date" id="attendance-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <button id="load-students-btn" class="btn btn-primary">Load Students</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="attendance-section" class="card" style="display: none;">
+                <div class="attendance-header">
+                    <h2>Student List</h2>
+                    <div class="bulk-actions">
+                        <button id="mark-all-present" class="btn btn-success">Mark All Present</button>
+                        <button id="mark-all-absent" class="btn btn-danger">Mark All Absent</button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Student Name</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendance-table-body">
+                            <!-- Students will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-actions">
+                    <button id="submit-attendance-btn" class="btn btn-primary">Submit Attendance</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/faculty.js"></script>
+</body>
+</html>

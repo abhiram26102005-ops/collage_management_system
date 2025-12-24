@@ -1,0 +1,167 @@
+/* Student-specific styles */
+
+.profile-card {
+  background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+.profile-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.subject-list {
+  display: grid;
+  gap: 15px;
+}
+
+.subject-attendance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.subject-attendance-item .subject-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.subject-attendance-item .attendance-percent {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Performance Grid */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.performance-card {
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border-top: 4px solid var(--primary-color);
+}
+
+.performance-card h3 {
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.performance-card .score {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.performance-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Timetable Styles */
+.timetable-container {
+  overflow-x: auto;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.timetable-table th,
+.timetable-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.timetable-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.timetable-table td {
+  background-color: var(--card-bg);
+}
+
+.timetable-slot {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--bg-color);
+}
+
+.timetable-slot.break {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.timetable-slot strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.timetable-slot small {
+  color: var(--text-secondary);
+}
+
+/* Announcements Container */
+.announcements-container {
+  display: grid;
+  gap: 20px;
+}
+
+.announcement-card {
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.announcement-card h3 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.announcement-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.announcement-card p {
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.filter-controls {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+}

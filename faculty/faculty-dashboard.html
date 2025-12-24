@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Faculty Dashboard</h2>
+        </div>
+        <div class="nav-user">
+            <span id="faculty-name">Faculty</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/faculty/faculty-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="/faculty/attendance.html">Mark Attendance</a></li>
+                <li><a href="/faculty/marks.html">Upload Marks</a></li>
+                <li><a href="/faculty/announcements.html">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Welcome, <span id="welcome-name">Faculty</span></h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h3 id="assigned-subjects">0</h3>
+                        <p>Assigned Subjects</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <div class="stat-info">
+                        <h3 id="total-students">0</h3>
+                        <p>Total Students</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3 id="classes-today">0</h3>
+                        <p>Classes Today</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3 id="pending-tasks">0</h3>
+                        <p>Pending Tasks</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h2>My Subjects</h2>
+                    <div id="subjects-list" class="subjects-list">
+                        <!-- Subjects will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Quick Actions</h2>
+                    <div class="quick-actions">
+                        <a href="/faculty/attendance.html" class="action-btn">
+                            <span>✅</span>
+                            <p>Mark Attendance</p>
+                        </a>
+                        <a href="/faculty/marks.html" class="action-btn">
+                            <span>📝</span>
+                            <p>Upload Marks</p>
+                        </a>
+                        <a href="/faculty/announcements.html" class="action-btn">
+                            <span>📢</span>
+                            <p>Post Announcement</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Recent Announcements</h2>
+                <ul id="recent-announcements" class="announcements-list">
+                    <li>No announcements yet</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/faculty.js"></script>
+</body>
+</html>

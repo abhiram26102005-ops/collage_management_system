@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/student.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Student Dashboard</h2>
+        </div>
+        <div class="nav-user">
+            <span id="student-name">Student</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/student/student-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="/student/attendance.html">My Attendance</a></li>
+                <li><a href="/student/marks.html">My Marks</a></li>
+                <li><a href="/student/timetable.html">Timetable</a></li>
+                <li><a href="/student/announcements.html">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Welcome, <span id="welcome-name">Student</span></h1>
+            
+            <div class="profile-card">
+                <div class="profile-info">
+                    <h3 id="student-id">Student ID</h3>
+                    <p><strong>Department:</strong> <span id="student-dept">-</span></p>
+                    <p><strong>Year:</strong> <span id="student-year">-</span></p>
+                    <p><strong>Email:</strong> <span id="student-email">-</span></p>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3 id="attendance-percentage">0%</h3>
+                        <p>Overall Attendance</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h3 id="total-subjects">0</h3>
+                        <p>Total Subjects</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3 id="classes-attended">0</h3>
+                        <p>Classes Attended</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📢</div>
+                    <div class="stat-info">
+                        <h3 id="new-announcements">0</h3>
+                        <p>New Announcements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h2>Subject-wise Attendance</h2>
+                    <div id="subject-attendance" class="subject-list">
+                        <!-- Subject attendance will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Recent Announcements</h2>
+                    <ul id="recent-announcements" class="announcements-list">
+                        <li>No announcements yet</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Quick Links</h2>
+                <div class="quick-actions">
+                    <a href="/student/attendance.html" class="action-btn">
+                        <span>📊</span>
+                        <p>View Attendance</p>
+                    </a>
+                    <a href="/student/marks.html" class="action-btn">
+                        <span>📝</span>
+                        <p>View Marks</p>
+                    </a>
+                    <a href="/student/timetable.html" class="action-btn">
+                        <span>📅</span>
+                        <p>View Timetable</p>
+                    </a>
+                    <a href="/student/announcements.html" class="action-btn">
+                        <span>📢</span>
+                        <p>All Announcements</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/student.js"></script>
+</body>
+</html>

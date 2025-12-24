@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Marks</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Upload Marks</h2>
+        </div>
+        <div class="nav-user">
+            <span id="faculty-name">Faculty</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/faculty/faculty-dashboard.html">Dashboard</a></li>
+                <li><a href="/faculty/attendance.html">Mark Attendance</a></li>
+                <li><a href="/faculty/marks.html" class="active">Upload Marks</a></li>
+                <li><a href="/faculty/announcements.html">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Upload Internal Marks</h1>
+            
+            <div class="card">
+                <h2>Select Assessment</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="marks-subject">Subject</label>
+                        <select id="marks-subject" required>
+                            <option value="">Select Subject</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="assessment-type">Assessment Type</label>
+                        <select id="assessment-type" required>
+                            <option value="">Select Type</option>
+                            <option value="Internal 1">Internal 1</option>
+                            <option value="Internal 2">Internal 2</option>
+                            <option value="Internal 3">Internal 3</option>
+                            <option value="Assignment">Assignment</option>
+                            <option value="Quiz">Quiz</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="max-marks">Maximum Marks</label>
+                        <input type="number" id="max-marks" required min="1" placeholder="e.g., 50">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <button id="load-marks-students-btn" class="btn btn-primary">Load Students</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="marks-section" class="card" style="display: none;">
+                <h2>Enter Marks</h2>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Student Name</th>
+                                <th>Department</th>
+                                <th>Marks Obtained</th>
+                            </tr>
+                        </thead>
+                        <tbody id="marks-table-body">
+                            <!-- Students will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-actions">
+                    <button id="submit-marks-btn" class="btn btn-primary">Submit Marks</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/faculty.js"></script>
+</body>
+</html>

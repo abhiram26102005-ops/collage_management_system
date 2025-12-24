@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Admin Dashboard</h2>
+        </div>
+        <div class="nav-user">
+            <span id="admin-name">Admin</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/admin/admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="/admin/manage-students.html">Manage Students</a></li>
+                <li><a href="/admin/manage-faculty.html">Manage Faculty</a></li>
+                <li><a href="/admin/manage-subjects.html">Manage Subjects</a></li>
+                <li><a href="/admin/reports.html">Reports</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Welcome to Admin Dashboard</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <div class="stat-info">
+                        <h3 id="total-students">0</h3>
+                        <p>Total Students</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🏫</div>
+                    <div class="stat-info">
+                        <h3 id="total-faculty">0</h3>
+                        <p>Total Faculty</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h3 id="total-subjects">0</h3>
+                        <p>Total Subjects</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3 id="total-departments">0</h3>
+                        <p>Departments</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h2>Recent Activities</h2>
+                    <ul id="recent-activities" class="activity-list">
+                        <li>System initialized</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Quick Actions</h2>
+                    <div class="quick-actions">
+                        <a href="/admin/manage-students.html" class="action-btn">
+                            <span>➕</span>
+                            <p>Add Student</p>
+                        </a>
+                        <a href="/admin/manage-faculty.html" class="action-btn">
+                            <span>➕</span>
+                            <p>Add Faculty</p>
+                        </a>
+                        <a href="/admin/manage-subjects.html" class="action-btn">
+                            <span>➕</span>
+                            <p>Add Subject</p>
+                        </a>
+                        <a href="/admin/reports.html" class="action-btn">
+                            <span>📊</span>
+                            <p>View Reports</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

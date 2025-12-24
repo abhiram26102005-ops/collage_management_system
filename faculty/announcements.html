@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Announcements</h2>
+        </div>
+        <div class="nav-user">
+            <span id="faculty-name">Faculty</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/faculty/faculty-dashboard.html">Dashboard</a></li>
+                <li><a href="/faculty/attendance.html">Mark Attendance</a></li>
+                <li><a href="/faculty/marks.html">Upload Marks</a></li>
+                <li><a href="/faculty/announcements.html" class="active">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Post Announcements</h1>
+            
+            <div class="card">
+                <h2>Create New Announcement</h2>
+                <form id="announcement-form">
+                    <div class="form-group">
+                        <label for="announcement-title">Title</label>
+                        <input type="text" id="announcement-title" required placeholder="Enter announcement title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="announcement-subject">Subject</label>
+                        <select id="announcement-subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="all">All Subjects</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="announcement-message">Message</label>
+                        <textarea id="announcement-message" rows="6" required placeholder="Enter announcement message"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Post Announcement</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="card">
+                <h2>Previous Announcements</h2>
+                <div id="announcements-list" class="announcements-list">
+                    <!-- Announcements will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/faculty.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Subjects</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Manage Subjects</h2>
+        </div>
+        <div class="nav-user">
+            <span id="admin-name">Admin</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/admin/admin-dashboard.html">Dashboard</a></li>
+                <li><a href="/admin/manage-students.html">Manage Students</a></li>
+                <li><a href="/admin/manage-faculty.html">Manage Faculty</a></li>
+                <li><a href="/admin/manage-subjects.html" class="active">Manage Subjects</a></li>
+                <li><a href="/admin/reports.html">Reports</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Subject Management</h1>
+                <button id="add-subject-btn" class="btn btn-primary">+ Add New Subject</button>
+            </div>
+            
+            <div id="add-subject-form" class="form-modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New Subject</h2>
+                        <button class="close-btn" id="close-form-btn">&times;</button>
+                    </div>
+                    <form id="subject-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject-code">Subject Code</label>
+                                <input type="text" id="subject-code" required placeholder="e.g., CS101">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject-name">Subject Name</label>
+                                <input type="text" id="subject-name" required placeholder="Enter subject name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject-department">Department</label>
+                                <select id="subject-department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="CSE">Computer Science</option>
+                                    <option value="ECE">Electronics</option>
+                                    <option value="MECH">Mechanical</option>
+                                    <option value="CIVIL">Civil</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject-year">Year</label>
+                                <select id="subject-year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="1">First Year</option>
+                                    <option value="2">Second Year</option>
+                                    <option value="3">Third Year</option>
+                                    <option value="4">Fourth Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject-credits">Credits</label>
+                                <input type="number" id="subject-credits" required min="1" max="6" placeholder="e.g., 4">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject-faculty">Assign Faculty</label>
+                                <select id="subject-faculty" required>
+                                    <option value="">Select Faculty</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Add Subject</button>
+                            <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="table-controls">
+                    <input type="text" id="search-subject" placeholder="Search subjects..." class="search-input">
+                    <select id="filter-department" class="filter-select">
+                        <option value="">All Departments</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="ECE">Electronics</option>
+                        <option value="MECH">Mechanical</option>
+                        <option value="CIVIL">Civil</option>
+                    </select>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Department</th>
+                                <th>Year</th>
+                                <th>Credits</th>
+                                <th>Faculty</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subjects-table-body">
+                            <!-- Subjects will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

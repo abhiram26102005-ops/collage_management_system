@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/student.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Announcements</h2>
+        </div>
+        <div class="nav-user">
+            <span id="student-name">Student</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/student/student-dashboard.html">Dashboard</a></li>
+                <li><a href="/student/attendance.html">My Attendance</a></li>
+                <li><a href="/student/marks.html">My Marks</a></li>
+                <li><a href="/student/timetable.html">Timetable</a></li>
+                <li><a href="/student/announcements.html" class="active">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>All Announcements</h1>
+            
+            <div class="card">
+                <div class="filter-controls">
+                    <select id="filter-subject" class="filter-select">
+                        <option value="">All Subjects</option>
+                    </select>
+                </div>
+                
+                <div id="announcements-container" class="announcements-container">
+                    <!-- Announcements will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/student.js"></script>
+</body>
+</html>

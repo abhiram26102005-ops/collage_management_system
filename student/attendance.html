@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Attendance</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/student.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>My Attendance</h2>
+        </div>
+        <div class="nav-user">
+            <span id="student-name">Student</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/student/student-dashboard.html">Dashboard</a></li>
+                <li><a href="/student/attendance.html" class="active">My Attendance</a></li>
+                <li><a href="/student/marks.html">My Marks</a></li>
+                <li><a href="/student/timetable.html">Timetable</a></li>
+                <li><a href="/student/announcements.html">Announcements</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>My Attendance Record</h1>
+            
+            <div class="card">
+                <h2>Overall Attendance Summary</h2>
+                <div class="attendance-summary">
+                    <div class="summary-item">
+                        <h3 id="overall-percentage">0%</h3>
+                        <p>Overall Percentage</p>
+                    </div>
+                    <div class="summary-item">
+                        <h3 id="total-classes">0</h3>
+                        <p>Total Classes</p>
+                    </div>
+                    <div class="summary-item">
+                        <h3 id="present-count">0</h3>
+                        <p>Present</p>
+                    </div>
+                    <div class="summary-item">
+                        <h3 id="absent-count">0</h3>
+                        <p>Absent</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Subject-wise Attendance</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Total Classes</th>
+                                <th>Present</th>
+                                <th>Absent</th>
+                                <th>Percentage</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendance-table-body">
+                            <!-- Attendance data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="/js/student.js"></script>
+</body>
+</html>
